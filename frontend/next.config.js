@@ -19,6 +19,42 @@ const nextConfig = {
   },
   async headers() {
     return [
+      {
+        source: '/docs/:path*.mp4',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/docs/:path*.webm',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/docs/:path*.ogg',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, must-revalidate',
+          },
+        ],
+      },
+      {
+        source: '/docs/:path*.mov',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, must-revalidate',
+          },
+        ],
+      },
      // {
        // source: '/_next/static/:path*',
         // headers: [

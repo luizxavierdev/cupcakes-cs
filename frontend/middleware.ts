@@ -11,11 +11,19 @@ export function middleware(request: NextRequest) {
     
     // Se for o vídeo específico mencionado, redirecionar para a rota customizada
     if (pathname.includes("05-video-apresentacao.mp4")) {
-      return NextResponse.redirect(new URL("/docs/situacao-3/05-video-apresentacao", request.url));
+      const url = new URL("/docs/situacao-3/05-video-apresentacao", request.url);
+      const response = NextResponse.redirect(url);
+      // Adicionar headers para evitar cache
+      response.headers.set("Cache-Control", "no-store, must-revalidate");
+      return response;
     }
     
     // Para outros vídeos, redirecionar para a rota dinâmica
-    return NextResponse.redirect(new URL(pathWithoutExt, request.url));
+    const url = new URL(pathWithoutExt, request.url);
+    const response = NextResponse.redirect(url);
+    // Adicionar headers para evitar cache
+    response.headers.set("Cache-Control", "no-store, must-revalidate");
+    return response;
   }
 
   return NextResponse.next();
