@@ -31,6 +31,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
+    "/docs/:path*.(mp4|webm|ogg|mov)",
     "/docs/:path*.mp4",
     "/docs/:path*.webm",
     "/docs/:path*.ogg",
