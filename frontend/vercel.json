@@ -4,6 +4,7 @@
   "outputDirectory": ".next",
   "installCommand": "yarn install",
   "framework": "nextjs",
-  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- frontend/ package.json yarn.lock"
+  "ignoreCommand": "if ! git rev-parse --verify HEAD^ >/dev/null 2>&1; then exit 1; fi; ! (git diff --name-only HEAD^ HEAD | grep -qE '^frontend/' || git diff --name-only HEAD^ HEAD | grep -qE '^(package\\.json|yarn\\.lock)$')"
 }
+
 
