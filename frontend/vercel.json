@@ -3,6 +3,7 @@
   "buildCommand": "yarn build",
   "outputDirectory": ".next",
   "installCommand": "yarn install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- frontend/ package.json yarn.lock"
 }
 

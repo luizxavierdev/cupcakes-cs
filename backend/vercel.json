@@ -4,6 +4,7 @@
   "outputDirectory": "dist",
   "installCommand": "yarn install",
   "framework": null,
+  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- backend/ package.json yarn.lock",
   "functions": {
     "api/index.ts": {
       "memory": 1024,
