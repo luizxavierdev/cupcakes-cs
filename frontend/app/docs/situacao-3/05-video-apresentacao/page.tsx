@@ -2,8 +2,8 @@ import { Button } from "@/components/atom/button";
 import { title } from "@/components/primitives";
 import { getTranslations } from "@/config/translations";
 
-import { BackButton } from "../../[path]/components/back-button";
-import { VideoPlayer } from "../../[path]/components/video-player";
+import { BackButton } from "../../[...path]/components/back-button";
+import { VideoPlayer } from "../../[...path]/components/video-player";
 
 export default async function VideoApresentacaoPage() {
   const videoPath = "/docs/situacao-3/05-video-apresentacao.mp4";
