@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Feedback - Cupcakes CS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e91e63;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bug-section {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+        }
+
+        .suggestion-section {
+            background: #d1ecf1;
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #17a2b8;
+            margin-bottom: 20px;
+        }
+
+        .steps-list {
+            list-style: decimal;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .steps-list li {
+            margin-bottom: 5px;
+        }
+
+        button {
+            background: #e91e63;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: #c2185b;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .note {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #2196F3;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍰 Formulário de Feedback - Cupcakes CS</h1>
+        
+        <div class="intro">
+            <p><strong>Objetivo:</strong> Coletar feedback de colegas de curso ou profissionais da área para identificar bugs, sugestões de melhoria e validar a solução desenvolvida.</p>
+            <p><strong>Instruções:</strong> Preencha o formulário abaixo com seus achados. Inclua screenshots quando encontrar erros ou tiver sugestões visuais.</p>
+        </div>
+
+        <form id="feedbackForm">
+            <h2>1. Informações do Testador</h2>
+            
+            <div class="form-group">
+                <label for="nome">Nome <span class="required">*</span></label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data">Data do Teste <span class="required">*</span></label>
+                <input type="date" id="data" name="data" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dispositivo">Dispositivo/Navegador</label>
+                <input type="text" id="dispositivo" name="dispositivo" placeholder="Ex: Chrome no Windows 11, Safari no iPhone">
+            </div>
+
+            <h2>2. Funcionalidades Testadas</h2>
+            <p>Marque as funcionalidades que você testou:</p>
+            
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func1" name="funcionalidades" value="navegacao-home">
+                    <label for="func1">Navegação na home</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func2" name="funcionalidades" value="categorias">
+                    <label for="func2">Visualização de categorias</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func3" name="funcionalidades" value="produtos">
+                    <label for="func3">Visualização de produtos</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func4" name="funcionalidades" value="adicionar-carrinho">
+                    <label for="func4">Adicionar produtos ao carrinho</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func5" name="funcionalidades" value="remover-carrinho">
+                    <label for="func5">Remover produtos do carrinho</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func6" name="funcionalidades" value="criar-conta">
+                    <label for="func6">Criar conta</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func7" name="funcionalidades" value="login">
+                    <label for="func7">Fazer login</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func8" name="funcionalidades" value="endereco">
+                    <label for="func8">Cadastrar endereço</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func9" name="funcionalidades" value="finalizar-compra">
+                    <label for="func9">Finalizar compra</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func10" name="funcionalidades" value="pedidos">
+                    <label for="func10">Visualizar pedidos</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="func11" name="funcionalidades" value="lojas">
+                    <label for="func11">Buscar lojas por região</label>
+                </div>
+            </div>
+
+            <h2>3. Bugs Encontrados</h2>
+
+            <div class="bug-section">
+                <h3>Bug #1</h3>
+                
+                <div class="form-group">
+                    <label for="bug1-desc">Descrição do Bug <span class="required">*</span></label>
+                    <textarea id="bug1-desc" name="bug1-desc" placeholder="Descreva o bug encontrado..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="bug1-passos">Passos para Reproduzir</label>
+                    <ol class="steps-list">
+                        <li><input type="text" name="bug1-passo1" placeholder="Passo 1" style="width: 100%; margin-top: 5px;"></li>
+                        <li><input type="text" name="bug1-passo2" placeholder="Passo 2" style="width: 100%; margin-top: 5px;"></li>
+                        <li><input type="text" name="bug1-passo3" placeholder="Passo 3" style="width: 100%; margin-top: 5px;"></li>
+                    </ol>
+                </div>
+
+                <div class="form-group">
+                    <label for="bug1-esperado">Comportamento Esperado</label>
+                    <textarea id="bug1-esperado" name="bug1-esperado"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="bug1-observado">Comportamento Observado</label>
+                    <textarea id="bug1-observado" name="bug1-observado"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Severidade</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="bug1-sev-critica" name="bug1-severidade" value="critica">
+                            <label for="bug1-sev-critica">Crítica</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bug1-sev-alta" name="bug1-severidade" value="alta">
+                            <label for="bug1-sev-alta">Alta</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bug1-sev-media" name="bug1-severidade" value="media">
+                            <label for="bug1-sev-media">Média</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="bug1-sev-baixa" name="bug1-severidade" value="baixa">
+                            <label for="bug1-sev-baixa">Baixa</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bug1-screenshot">Screenshot (anexar ou descrever)</label>
+                    <textarea id="bug1-screenshot" name="bug1-screenshot" placeholder="Descreva ou informe onde está o screenshot anexado"></textarea>
+                </div>
+            </div>
+
+            <h2>4. Sugestões de Melhoria</h2>
+
+            <div class="suggestion-section">
+                <h3>Sugestão #1</h3>
+                
+                <div class="form-group">
+                    <label>Área</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="sug1-area-interface" name="sug1-area" value="interface">
+                            <label for="sug1-area-interface">Interface</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="sug1-area-funcionalidade" name="sug1-area" value="funcionalidade">
+                            <label for="sug1-area-funcionalidade">Funcionalidade</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="sug1-area-performance" name="sug1-area" value="performance">
+                            <label for="sug1-area-performance">Performance</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="sug1-area-outro" name="sug1-area" value="outro">
+                            <label for="sug1-area-outro">Outro</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="sug1-desc">Descrição</label>
+                    <textarea id="sug1-desc" name="sug1-desc"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="sug1-justificativa">Justificativa</label>
+                    <textarea id="sug1-justificativa" name="sug1-justificativa"></textarea>
+                </div>
+            </div>
+
+            <h2>5. Avaliação Geral</h2>
+
+            <div class="form-group">
+                <label>Facilidade de uso</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="usabilidade-muito-facil" name="usabilidade" value="muito-facil">
+                        <label for="usabilidade-muito-facil">Muito Fácil</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="usabilidade-facil" name="usabilidade" value="facil">
+                        <label for="usabilidade-facil">Fácil</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="usabilidade-medio" name="usabilidade" value="medio">
+                        <label for="usabilidade-medio">Médio</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="usabilidade-dificil" name="usabilidade" value="dificil">
+                        <label for="usabilidade-dificil">Difícil</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="usabilidade-muito-dificil" name="usabilidade" value="muito-dificil">
+                        <label for="usabilidade-muito-dificil">Muito Difícil</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios-usabilidade">Comentários sobre Usabilidade</label>
+                <textarea id="comentarios-usabilidade" name="comentarios-usabilidade"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Aparência visual</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <input type="radio" id="interface-excelente" name="interface" value="excelente">
+                        <label for="interface-excelente">Excelente</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="interface-boa" name="interface" value="boa">
+                        <label for="interface-boa">Boa</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="interface-regular" name="interface" value="regular">
+                        <label for="interface-regular">Regular</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="interface-ruim" name="interface" value="ruim">
+                        <label for="interface-ruim">Ruim</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="interface-muito-ruim" name="interface" value="muito-ruim">
+                        <label for="interface-muito-ruim">Muito Ruim</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios-adicionais">Comentários Adicionais</label>
+                <textarea id="comentarios-adicionais" name="comentarios-adicionais" placeholder="Compartilhe qualquer outro feedback, observação ou sugestão..."></textarea>
+            </div>
+
+            <div class="note">
+                <p><strong>Nota:</strong> Este formulário pode ser preenchido e enviado por email ou impresso e preenchido manualmente. Screenshots podem ser anexados separadamente.</p>
+            </div>
+
+            <button type="button" onclick="window.print()">Imprimir Formulário</button>
+            <button type="button" onclick="exportarDados()">Exportar Dados (JSON)</button>
+        </form>
+    </div>
+
+    <script>
+        function exportarDados() {
+            const form = document.getElementById('feedbackForm');
+            const formData = new FormData(form);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                if (data[key]) {
+                    if (Array.isArray(data[key])) {
+                        data[key].push(value);
+                    } else {
+                        data[key] = [data[key], value];
+                    }
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            const json = JSON.stringify(data, null, 2);
+            const blob = new Blob([json], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'feedback-cupcakes-cs.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
+

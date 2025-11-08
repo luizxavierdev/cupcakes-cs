@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "Classics",
+      "description": "Timeless and classic cupcakes, perfect for lovers of traditional flavors.",
+      "image": "/assets/category-1.png"
+    },
+    {
+      "name": "Fruit Flavors",
+      "description": "Fresh and fruity cupcakes, bursting with the taste of natural fruits.",
+      "image": "/assets/category-2.png"
+    },
+    {
+      "name": "Chocolate",
+      "description": "Indulgent cupcakes for chocolate lovers, with rich and intense combinations.",
+      "image": "/assets/category-3.png"
+    },
+    {
+      "name": "Red Velvet",
+      "description": "The famous Red Velvet cupcakes, with their velvety texture and unique flavor.",
+      "image": "/assets/category-4.png"
+    },
+    {
+      "name": "Specials",
+      "description": "Exclusive gourmet cupcakes with premium ingredients and sophisticated decorations.",
+      "image": "/assets/category-5.png"
+    },
+    {
+      "name": "Limited Edition",
+      "description": "Seasonal and special edition cupcakes that change regularly — don't miss out!",
+      "image": "/assets/category-6.png"
+    }
+  ]
+}

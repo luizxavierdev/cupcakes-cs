@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diagrama de Caso de Uso - Cupcakes CS - Sem conta</title>
+<style>
+  /* Reset e base */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+  }
+  .diagram-container {
+    width: 850px;
+    max-width: 100%;
+    height: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 20px;
+    box-sizing: border-box;
+    /* overflow: auto; */
+  }
+  h1 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #d35400;
+  }
+  svg {
+    width: 100%;
+    height: 540px;
+  }
+  /* Estilos para os casos de uso */
+  .usecase {
+    fill: #f8c291;
+    stroke: #d35400;
+    stroke-width: 2;
+  }
+  .usecase-text {
+    font-size: 14px;
+    fill: #6e2c00;
+    pointer-events: none;
+    user-select: none;
+  }
+  /* Estilos para o ator */
+  .actor-circle {
+    fill: #6a89cc;
+    stroke: #4a69bd;
+    stroke-width: 2;
+  }
+  .actor-text {
+    fill: #2c3e50;
+    font-weight: 600;
+    font-size: 16px;
+    user-select: none;
+  }
+  /* Linhas */
+  line {
+    stroke: #34495e;
+    stroke-width: 1.8;
+  }
+  /* Setas */
+  marker#arrowhead {
+    fill: #34495e;
+  }
+  /* Agrupamento */
+  .actor-group {
+    text-anchor: middle;
+  }
+</style>
+</head>
+<body>
+  <div class="diagram-container" role="img" aria-label="Diagrama de Caso de Uso para Site de Cupcakes">
+    <h1>Diagrama de Caso de Uso<br/> Cupcakes CS - Sem conta</h1>
+    <svg viewBox="0 0 350 540" aria-hidden="true">
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                refX="5" refY="3.5" orient="auto" >
+          <polygon points="0 0, 10 3.5, 0 7" />
+        </marker>
+      </defs>
+      <!-- Ator -->
+      <g class="actor-group" transform="translate(60, 270)">
+        <!-- Cabeça -->
+        <circle class="actor-circle" cx="0" cy="-70" r="20" />
+        <!-- Corpo -->
+        <line x1="0" y1="-50" x2="0" y2="40" />
+        <!-- Braços -->
+        <line x1="-30" y1="-10" x2="30" y2="-10" />
+        <!-- Pernas -->
+        <line x1="0" y1="40" x2="-25" y2="90" />
+        <line x1="0" y1="40" x2="25" y2="90" />
+        <!-- Rótulo -->
+        <text class="actor-text" y="130" x="0">Cliente</text>
+      </g>
+
+      <!-- Casos de Uso -->
+      <!-- Entrou no site -->
+      <ellipse class="usecase" cx="240" cy="50" rx="80" ry="26" />
+      <text class="usecase-text" x="240" y="56" text-anchor="middle">Entrou no Site</text>
+
+      <!-- Categorias -->
+      <ellipse class="usecase" cx="240" cy="110" rx="80" ry="26" />
+      <text class="usecase-text" x="240" y="116" text-anchor="middle">Ver Categorias</text>
+
+      <!-- Adicionar Cupcake na Cesta -->
+      <ellipse class="usecase" cx="240" cy="170" rx="80" ry="26" />
+      <text class="usecase-text" x="240" y="176" text-anchor="middle">Adicionar Cupcake na Cesta</text>
+
+      <!-- Criar Conta -->
+      <ellipse class="usecase" cx="240" cy="230" rx="80" ry="26" />
+      <text class="usecase-text" x="240" y="236" text-anchor="middle">Criar Conta</text>
+
+      <!-- Adicionar Endereço -->
+      <ellipse class="usecase" cx="240" cy="290" rx="80" ry="26" />
+      <text class="usecase-text" x="240" y="296" text-anchor="middle">Adicionar Endereço</text>
+
+      <!-- Pedido Finalizado -->
+      <ellipse class="usecase" cx="240" cy="350" rx="80" ry="26" />
+      <text class="usecase-text" x="240" y="356" text-anchor="middle">Pedido Finalizado</text>
+
+      <!-- Ver Pedidos -->
+      <ellipse class="usecase" cx="240" cy="410" rx="80" ry="26" />
+      <text class="usecase-text" x="240" y="416" text-anchor="middle">Ver Pedidos</text>
+
+      <!-- Conexões do ator aos casos de uso (linhas simples sem seta) -->
+      <line x1="80" y1="195" x2="160" y2="50" />
+      <line x1="80" y1="195" x2="160" y2="110" />
+      <line x1="80" y1="195" x2="160" y2="170" />
+      <line x1="80" y1="195" x2="160" y2="230" />
+      <line x1="80" y1="195" x2="160" y2="290" />
+      <line x1="80" y1="195" x2="160" y2="350" />
+      <line x1="80" y1="195" x2="160" y2="410" />
+
+      <!-- Fluxo entre casos de uso com setas verticais para baixo -->
+      <!-- Entrou no Site -> Ver Categorias -->
+      <line x1="240" y1="76" x2="240" y2="90" marker-end="url(#arrowhead)" />
+      <!-- Ver Categorias -> Adicionar Cupcake na Cesta -->
+      <line x1="240" y1="136" x2="240" y2="160" marker-end="url(#arrowhead)" />
+      <!-- Adicionar Cupcake na Cesta -> Criar Conta -->
+      <line x1="240" y1="196" x2="240" y2="220" marker-end="url(#arrowhead)" />
+      <!-- Criar Conta -> Adicionar Endereço -->
+      <line x1="240" y1="256" x2="240" y2="280" marker-end="url(#arrowhead)" />
+      <!-- Adicionar Endereço -> Pedido Finalizado -->
+      <line x1="240" y1="316" x2="240" y2="340" marker-end="url(#arrowhead)" />
+      <!-- Pedido Finalizado -> Ver Pedidos -->
+      <line x1="240" y1="376" x2="240" y2="400" marker-end="url(#arrowhead)" />
+    </svg>
+  </div>
+</body>
+</html>

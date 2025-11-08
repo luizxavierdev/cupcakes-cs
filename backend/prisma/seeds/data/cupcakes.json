@@ -1,0 +1,182 @@
+{
+  "cupcakes": [
+    {
+      "name": "Belgian Chocolate Cupcake",
+      "categories": ["Classics", "Chocolate"],
+      "value": 4.99,
+      "ingredients": [
+        "Belgian chocolate",
+        "Chocolate ganache",
+        "Vanilla cream",
+        "Chocolate shavings"
+      ],
+      "description": "A decadent Belgian chocolate cupcake filled with chocolate ganache, topped with vanilla cream, and generously decorated with chocolate shavings.",
+      "image": "/assets/cupcake-4.png"
+    },
+    {
+      "name": "Fresh Strawberry Cupcake",
+      "categories": ["Classics", "Fruit Flavors"],
+      "value": 6.39,
+      "ingredients": ["Vanilla", "Fresh strawberries", "Whipped cream"],
+      "description": "A light vanilla cupcake filled with fresh strawberries, topped with whipped cream, and finished with whole strawberries.",
+      "image": "/assets/cupcake-1.png"
+    },
+    {
+      "name": "Red Velvet Cupcake",
+      "categories": ["Classics", "Red Velvet"],
+      "value": 7.49,
+      "ingredients": ["Red velvet batter", "Cream cheese", "Sugar decoration"],
+      "description": "The classic Red Velvet with its velvety texture, filled with cream cheese and decorated with elegant sugar details.",
+      "image": "/assets/cupcake-6.png"
+    },
+    {
+      "name": "Sicilian Lemon Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 6.90,
+      "ingredients": ["Vanilla", "Sicilian lemon", "Lemon topping"],
+      "description": "A vanilla cupcake with a refreshing touch of Sicilian lemon, topped with a delicious lemon glaze.",
+      "image": "/assets/cupcake-3.png"
+    },
+    {
+      "name": "Vanilla Raspberry Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 2.49,
+      "ingredients": ["Vanilla", "Fresh raspberries", "Vanilla frosting"],
+      "description": "A vanilla cupcake filled with fresh raspberries and topped with smooth vanilla frosting.",
+      "image": "/assets/cupcake-2.png"
+    },
+    {
+      "name": "Salted Caramel Cupcake",
+      "categories": ["Specials"],
+      "value": 6.29,
+      "ingredients": ["Caramel batter", "Salted caramel", "Caramel topping"],
+      "description": "A sweet and salty flavor explosion with caramel batter, salted caramel filling, and a caramel topping.",
+      "image": "/assets/cupcake-5.png"
+    },
+    {
+      "name": "Espresso Coffee Cupcake",
+      "categories": ["Specials", "Chocolate"],
+      "value": 1.99,
+      "ingredients": ["Coffee batter", "Chocolate ganache", "Espresso coffee"],
+      "description": "A cupcake for coffee lovers with coffee batter, chocolate ganache, and a touch of espresso.",
+      "image": "/assets/cupcake-8.png"
+    },
+    {
+      "name": "Caramelized Peanut Cupcake",
+      "categories": ["Specials"],
+      "value": 9.99,
+      "ingredients": ["Peanut batter", "Caramel", "Caramelized peanuts"],
+      "description": "A flavorful cupcake with peanut batter, caramel filling, and caramelized peanuts on top.",
+      "image": "/assets/cupcake-7.png"
+    },
+    {
+      "name": "Apple Cinnamon Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 2.99,
+      "ingredients": ["Fresh apples", "Cinnamon", "Cinnamon topping"],
+      "description": "The classic combination of apple and cinnamon in a moist and delicious cupcake with cinnamon topping.",
+      "image": "/assets/cupcake-10.png"
+    },
+    {
+      "name": "Coconut Pineapple Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 3.49,
+      "ingredients": ["Grated coconut", "Pineapple", "Coconut topping"],
+      "description": "A tropical cupcake with grated coconut and pineapple chunks, topped with a generous layer of coconut.",
+      "image": "/assets/cupcake-9.png"
+    },
+    {
+      "name": "Pistachio Cupcake",
+      "categories": ["Specials"],
+      "value": 3.79,
+      "ingredients": ["Pistachio batter", "White chocolate ganache", "Chopped pistachios"],
+      "description": "A sophisticated cupcake with pistachio batter, white chocolate ganache filling, and chopped pistachios.",
+      "image": "/assets/cupcake-11.png"
+    },
+    {
+      "name": "Passion Fruit Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 5.49,
+      "ingredients": ["Fresh passion fruit", "Passion fruit topping"],
+      "description": "A cupcake with the refreshing and tropical taste of passion fruit, topped with passion fruit glaze.",
+      "image": "/assets/cupcake-13.png"
+    },
+    {
+      "name": "Mint Chocolate Cupcake",
+      "categories": ["Specials", "Chocolate"],
+      "value": 16.39,
+      "ingredients": ["Chocolate batter", "Mint cream", "Chocolate shavings"],
+      "description": "A perfect combination of chocolate and mint in a rich cupcake, with mint cream and chocolate shavings.",
+      "image": "/assets/cupcake-12.png"
+    },
+    {
+      "name": "Hazelnut Cupcake",
+      "categories": ["Specials"],
+      "value": 2.29,
+      "ingredients": ["Hazelnut batter", "Chocolate ganache", "Whole hazelnuts"],
+      "description": "A hazelnut cupcake with rich batter, chocolate ganache, and whole hazelnuts for a crunchy experience.",
+      "image": "/assets/cupcake-14.png"
+    },
+    {
+      "name": "Mixed Berries Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 5.49,
+      "ingredients": ["Fresh mixed berries", "Mixed berry topping"],
+      "description": "A cupcake loaded with fresh mixed berries and topped with a delicious berry glaze.",
+      "image": "/assets/cupcake-16.png"
+    },
+    {
+      "name": "Blackberry Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 11.49,
+      "ingredients": ["Fresh blackberries", "Blackberry topping"],
+      "description": "A cupcake packed with fresh blackberries, perfectly balanced with a blackberry glaze.",
+      "image": "/assets/cupcake-18.png"
+    },
+    {
+      "name": "Peach Ginger Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 4.39,
+      "ingredients": ["Fresh peaches", "Ginger", "Peach topping"],
+      "description": "A cupcake blending fresh peaches with a hint of ginger, topped with a smooth peach glaze.",
+      "image": "/assets/cupcake-15.png"
+    },
+    {
+      "name": "Banana Chocolate Cupcake",
+      "categories": ["Fruit Flavors", "Chocolate"],
+      "value": 3.49,
+      "ingredients": ["Ripe bananas", "Chocolate chips", "Chocolate topping"],
+      "description": "A banana cupcake with chocolate chunks, perfect for fruit and chocolate lovers alike.",
+      "image": "/assets/cupcake-17.png"
+    },
+    {
+      "name": "Lavender Cupcake",
+      "categories": ["Specials"],
+      "value": 1.99,
+      "ingredients": ["Lavender batter", "Lavender cream", "Lavender flowers"],
+      "description": "An exclusive cupcake with a gentle lavender essence, topped with lavender cream and decorated with lavender flowers.",
+      "image": "/assets/cupcake-19.png"
+    },
+    {
+      "name": "Pumpkin Walnut Cupcake",
+      "categories": ["Fruit Flavors"],
+      "value": 5.49,
+      "ingredients": ["Fresh pumpkin", "Chopped walnuts", "Pumpkin topping"],
+      "description": "A seasonal pumpkin cupcake with chopped walnuts and a creamy pumpkin topping.",
+      "image": "/assets/cupcake-20.png"
+    },
+    {
+      "name": "Golden Truffle Cupcake",
+      "categories": ["Limited Edition"],
+      "value": 12.99,
+      "ingredients": [
+        "Premium chocolate truffle",
+        "Gold leaf decoration",
+        "Vanilla bean cream",
+        "Dark chocolate ganache"
+      ],
+      "description": "An exclusive limited edition cupcake with premium chocolate truffle filling, topped with vanilla bean cream, dark chocolate ganache, and elegant gold leaf decoration.",
+      "image": "/assets/cupcake-12.png"
+    }
+  ]
+}
