@@ -9,11 +9,19 @@ export function middleware(request: NextRequest) {
     // Remover a extensão e redirecionar para a página customizada
     const pathWithoutExt = pathname.replace(/\.(mp4|webm|ogg|mov)$/i, "");
     
-    // Se for o vídeo específico mencionado, redirecionar para a rota customizada
-    if (pathname.includes("05-video-apresentacao.mp4")) {
-      const url = new URL("/docs/situacao-3/05-video-apresentacao", request.url);
+    // Mapeamento de vídeos para suas rotas customizadas
+    const videoRoutes: Record<string, string> = {
+      "05-video-apresentacao.mp4": "/docs/situacao-3/05-video-apresentacao",
+      "Vídeo-da-Solução-atualizada.mp4": "/docs/situacao-3/video-solucao",
+    };
+    
+    // Verificar se é um vídeo com rota customizada
+    const videoFileName = pathname.split("/").pop() || "";
+    const customRoute = videoRoutes[videoFileName];
+    
+    if (customRoute) {
+      const url = new URL(customRoute, request.url);
       const response = NextResponse.redirect(url);
-      // Adicionar headers para evitar cache
       response.headers.set("Cache-Control", "no-store, must-revalidate");
       return response;
     }
@@ -21,7 +29,6 @@ export function middleware(request: NextRequest) {
     // Para outros vídeos, redirecionar para a rota dinâmica
     const url = new URL(pathWithoutExt, request.url);
     const response = NextResponse.redirect(url);
-    // Adicionar headers para evitar cache
     response.headers.set("Cache-Control", "no-store, must-revalidate");
     return response;
   }

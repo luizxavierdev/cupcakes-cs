@@ -33,26 +33,26 @@ Construir uma plataforma web completa para comercialização de cupcakes gourmet
 
 Este projeto está organizado conforme as situações-problema do PIT II:
 
-### [Situação 1 - Planejamento](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/README.md)
-- ✅ [Escopo e Ideia](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/01-escopo-ideia.md)
-- ✅ [Modelagem UML](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/02-modelagem-uml.md)
-- ✅ [Interface Humano Computador (IHC)](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/03-ihc.md)
-- ✅ [Projeto de Banco de Dados](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/04-banco-dados.md)
-- ✅ [Dicionário de Dados](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/05-dicionario-dados.md)
+### [Situação 1 - Planejamento](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/README.md)
+- ✅ [Escopo e Ideia](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/01-escopo-ideia.md)
+- ✅ [Modelagem UML](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/02-modelagem-uml.md)
+- ✅ [Interface Humano Computador (IHC)](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/03-ihc.md)
+- ✅ [Projeto de Banco de Dados](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/04-banco-dados.md)
+- ✅ [Dicionário de Dados](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/05-dicionario-dados.md)
 
-### [Situação 2 - Desenvolvimento](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/README.md)
-- ✅ [Repositório Git](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/01-repositorio-git.md)
-- ✅ [Arquitetura do Sistema](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/02-arquitetura.md)
-- ✅ [Tecnologias Utilizadas](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/03-tecnologias.md)
-- ✅ [Configuração de Deploy (Vercel)](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/04-deploy.md)
+### [Situação 2 - Desenvolvimento](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/README.md)
+- ✅ [Repositório Git](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/01-repositorio-git.md)
+- ✅ [Arquitetura do Sistema](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/02-arquitetura.md)
+- ✅ [Tecnologias Utilizadas](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/03-tecnologias.md)
+- ✅ [Configuração de Deploy (Vercel)](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/04-deploy.md)
 
-### [Situação 3 - Testes e Validação](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/README.md)
-- ✅ [Testes (Verificação e Validação)](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/01-testes.md)
-- ✅ [Formulário de Feedback](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/formulario-feedback.html)
-- ✅ [Correções e Melhorias](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/03-correcoes-melhorias.md)
-- ✅ [Documentação Final](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/04-documentacao-final.md)
-- ✅ [Vídeo de Apresentação](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/05-video-apresentacao.mp4)
-- ✅ [Vídeo da Solução](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/Vídeo-da-Solução-atualizada.mp4)
+### [Situação 3 - Testes e Validação](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/README.md)
+- ✅ [Testes (Verificação e Validação)](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/01-testes.md)
+- ✅ [Formulário de Feedback](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/formulario-feedback.html)
+- ✅ [Correções e Melhorias](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/03-correcoes-melhorias.md)
+- ✅ [Documentação Final](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/04-documentacao-final.md)
+- ✅ [Vídeo de Apresentação](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/05-video-apresentacao)
+- ✅ [Vídeo da Solução](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/video-solucao)
 
 ---
 
@@ -78,7 +78,7 @@ Este projeto está organizado conforme as situações-problema do PIT II:
 - **GitHub Actions** - CI/CD
 - **Docker Hub** - Registry de imagens
 
-> Veja a [documentação completa de tecnologias](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/03-tecnologias.md)
+> Veja a [documentação completa de tecnologias](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/03-tecnologias.md)
 
 ---
 
@@ -232,7 +232,7 @@ Controller (HTTP) → Service (Business Logic) → Gateway (Data Access) → Pri
 - `store` - Lojas e áreas de atendimento
 - `shared` - Código compartilhado
 
-> Veja a [documentação completa de arquitetura](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/02-arquitetura.md)
+> Veja a [documentação completa de arquitetura](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/02-arquitetura.md)
 
 ### Frontend - MVVM
 
@@ -263,8 +263,8 @@ Banco de dados relacional escolhido pela robustez, escalabilidade e facilidade d
 
 ### Diagrama ER
 
-> Veja a [documentação completa do banco de dados](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/04-banco-dados.md) para diagramas e estrutura  
-> Veja o [dicionário de dados](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/05-dicionario-dados.md)
+> Veja a [documentação completa do banco de dados](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/04-banco-dados.md) para diagramas e estrutura  
+> Veja o [dicionário de dados](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/05-dicionario-dados.md)
 
 ### Prisma ORM
 
@@ -297,7 +297,7 @@ O projeto está configurado para deploy na **Vercel**:
 - `PORT` - Porta do servidor
 - `NODE_ENV` - Ambiente (production)
 
-> Veja a [documentação completa de deploy](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/04-deploy.md)
+> Veja a [documentação completa de deploy](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/04-deploy.md)
 
 ### CI/CD
 
@@ -314,7 +314,7 @@ O projeto utiliza **GitHub Actions** para:
 
 Toda a documentação está organizada no diretório `frontend/public/docs/` e acessível de duas formas:
 
-- **No repositório GitHub**: Use os links relativos no README (ex: `https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/...`)
+- **No repositório GitHub**: Use os links relativos no README (ex: `https://cupcakes-cs-frontend.vercel.app/docs/...`)
 - **Na aplicação web**: Acesse via `/docs/` quando a aplicação estiver rodando (ex: `http://localhost:3001/docs/...`)
 
 > **Nota**: Os links no README apontam para o caminho no repositório. Na aplicação em produção, acesse via `/docs/`
@@ -326,12 +326,12 @@ Toda a documentação está organizada no diretório `frontend/public/docs/` e a
 #### Situação 1 - Planejamento
 
 **Documentos Markdown**:
-- [README.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/README.md) - Índice e visão geral da Situação 1
-- [01-escopo-ideia.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/01-escopo-ideia.md) - Escopo, objetivos e requisitos do projeto
-- [02-modelagem-uml.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/02-modelagem-uml.md) - Diagramas UML (Classes, Casos de Uso, Sequência, Atividades)
-- [03-ihc.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/03-ihc.md) - Interface Humano Computador (Telas, Protótipos, Mensagens)
-- [04-banco-dados.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/04-banco-dados.md) - Projeto de Banco de Dados (Conceitual, Lógico, Físico)
-- [05-dicionario-dados.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/05-dicionario-dados.md) - Dicionário completo de dados
+- [README.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/README.md) - Índice e visão geral da Situação 1
+- [01-escopo-ideia.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/01-escopo-ideia.md) - Escopo, objetivos e requisitos do projeto
+- [02-modelagem-uml.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/02-modelagem-uml.md) - Diagramas UML (Classes, Casos de Uso, Sequência, Atividades)
+- [03-ihc.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/03-ihc.md) - Interface Humano Computador (Telas, Protótipos, Mensagens)
+- [04-banco-dados.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/04-banco-dados.md) - Projeto de Banco de Dados (Conceitual, Lógico, Físico)
+- [05-dicionario-dados.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/05-dicionario-dados.md) - Dicionário completo de dados
 
 **Diagramas e Artefatos**:
 - `cupcakes-cs - diagrama-de-classes.png` - Diagrama de Classes UML
@@ -365,23 +365,23 @@ Toda a documentação está organizada no diretório `frontend/public/docs/` e a
 #### Situação 2 - Desenvolvimento
 
 **Documentos Markdown**:
-- [README.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/README.md) - Índice e visão geral da Situação 2
-- [01-repositorio-git.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/01-repositorio-git.md) - Informações sobre o repositório Git, branches e commits
-- [02-arquitetura.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/02-arquitetura.md) - Arquitetura do sistema (Backend e Frontend)
-- [03-tecnologias.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/03-tecnologias.md) - Stack tecnológico completo utilizado
-- [04-deploy.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/04-deploy.md) - Configuração de deploy na Vercel
+- [README.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/README.md) - Índice e visão geral da Situação 2
+- [01-repositorio-git.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/01-repositorio-git.md) - Informações sobre o repositório Git, branches e commits
+- [02-arquitetura.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/02-arquitetura.md) - Arquitetura do sistema (Backend e Frontend)
+- [03-tecnologias.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/03-tecnologias.md) - Stack tecnológico completo utilizado
+- [04-deploy.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/04-deploy.md) - Configuração de deploy na Vercel
 
 ---
 
 #### Situação 3 - Testes e Validação
 
 **Documentos Markdown**:
-- [README.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/README.md) - Índice e visão geral da Situação 3
-- [01-testes.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/01-testes.md) - Documentação de testes (Unitários, Integração, E2E)
-- [02-formulario-feedback.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/02-formulario-feedback.md) - Documentação do formulário de feedback
-- [03-correcoes-melhorias.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/03-correcoes-melhorias.md) - Correções e melhorias implementadas
-- [04-documentacao-final.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/04-documentacao-final.md) - Documentação final e índice completo
-- [05-video-apresentacao.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/05-video-apresentacao.md) - Guia para vídeo de apresentação
+- [README.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/README.md) - Índice e visão geral da Situação 3
+- [01-testes.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/01-testes.md) - Documentação de testes (Unitários, Integração, E2E)
+- [02-formulario-feedback.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/02-formulario-feedback.md) - Documentação do formulário de feedback
+- [03-correcoes-melhorias.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/03-correcoes-melhorias.md) - Correções e melhorias implementadas
+- [04-documentacao-final.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/04-documentacao-final.md) - Documentação final e índice completo
+- [05-video-apresentacao.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/05-video-apresentacao.md) - Guia para vídeo de apresentação
 
 **Formulário Interativo**:
 - `formulario-feedback.html` - Formulário HTML interativo para coleta de feedback
@@ -407,11 +407,11 @@ Toda a documentação está organizada no diretório `frontend/public/docs/` e a
 
 **Para Avaliadores**:
 
-1. **Início Rápido**: Comece pelo [README da Situação 1](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-1/README.md) para entender o planejamento
-2. **Arquitetura**: Veja [02-arquitetura.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/02-arquitetura.md) para entender a estrutura técnica
-3. **Tecnologias**: Consulte [03-tecnologias.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-2/03-tecnologias.md) para ver o stack completo
-4. **Testes**: Revise [01-testes.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/01-testes.md) para verificar a cobertura de testes
-5. **Correções**: Veja [03-correcoes-melhorias.md](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/03-correcoes-melhorias.md) para entender as melhorias implementadas
+1. **Início Rápido**: Comece pelo [README da Situação 1](https://cupcakes-cs-frontend.vercel.app/docs/situacao-1/README.md) para entender o planejamento
+2. **Arquitetura**: Veja [02-arquitetura.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/02-arquitetura.md) para entender a estrutura técnica
+3. **Tecnologias**: Consulte [03-tecnologias.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-2/03-tecnologias.md) para ver o stack completo
+4. **Testes**: Revise [01-testes.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/01-testes.md) para verificar a cobertura de testes
+5. **Correções**: Veja [03-correcoes-melhorias.md](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/03-correcoes-melhorias.md) para entender as melhorias implementadas
 
 **Ordem Recomendada de Leitura**:
 1. Situação 1 → Planejamento completo
@@ -445,7 +445,7 @@ Este é um projeto acadêmico, mas sugestões e feedback são bem-vindos!
 
 Para reportar bugs ou sugerir melhorias:
 1. Abra uma issue no repositório
-2. Ou use o [formulário de feedback](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/formulario-feedback.html)
+2. Ou use o [formulário de feedback](https://cupcakes-cs-frontend.vercel.app/docs/situacao-3/formulario-feedback.html)
 
 ---
 
