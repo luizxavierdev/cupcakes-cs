@@ -4,20 +4,31 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Interceptar requisições de vídeos na pasta docs
-  if (pathname.startsWith("/docs/") && /\.(mp4|webm|ogg|mov)$/i.test(pathname)) {
-    // Remover a extensão e redirecionar para a página customizada
-    const pathWithoutExt = pathname.replace(/\.(mp4|webm|ogg|mov)$/i, "");
+  // Permitir que arquivos estáticos sejam servidos normalmente
+  // Verificar se é uma requisição de navegação (HTML) ou de recurso (arquivo)
+  const isResourceRequest = /\.(mp4|webm|ogg|mov|jpg|jpeg|png|gif|svg|pdf|css|js|woff|woff2|ttf|eot)$/i.test(pathname);
+  
+  // Se for uma requisição de recurso estático, deixar passar
+  if (isResourceRequest) {
+    return NextResponse.next();
+  }
+
+  // Mapeamento de vídeos para suas rotas customizadas (apenas para navegação)
+  const videoRoutes: Record<string, string> = {
+    "05-video-apresentacao": "/video-apresentacao",
+    "05-video-apresentacao.mp4": "/video-apresentacao",
+    "Vídeo-da-Solução-atualizada": "/video-solucao",
+    "Vídeo-da-Solução-atualizada.mp4": "/video-solucao",
+    "cupcakes-cs-Mobile": "/docs/cupcakes-cs-mobile/cupcakes-cs-mobile",
+    "cupcakes-cs-desktop": "/docs/cupcakes-cs-desktop/cupcakes-cs-desktop",
+  };
+
+  // Interceptar apenas requisições de navegação na pasta docs
+  if (pathname.startsWith("/docs/") && !isResourceRequest) {
+    const fileName = decodeURIComponent(pathname.split("/").pop() || "");
     
-    // Mapeamento de vídeos para suas rotas customizadas
-    const videoRoutes: Record<string, string> = {
-      "05-video-apresentacao.mp4": "/docs/situacao-3/05-video-apresentacao",
-      "Vídeo-da-Solução-atualizada.mp4": "/docs/situacao-3/video-solucao",
-    };
-    
-    // Verificar se é um vídeo com rota customizada
-    const videoFileName = pathname.split("/").pop() || "";
-    const customRoute = videoRoutes[videoFileName];
+    // Verificar se é um vídeo conhecido (sem extensão, pois já filtramos recursos)
+    const customRoute = videoRoutes[fileName];
     
     if (customRoute) {
       const url = new URL(customRoute, request.url);
@@ -25,12 +36,6 @@ export function middleware(request: NextRequest) {
       response.headers.set("Cache-Control", "no-store, must-revalidate");
       return response;
     }
-    
-    // Para outros vídeos, redirecionar para a rota dinâmica
-    const url = new URL(pathWithoutExt, request.url);
-    const response = NextResponse.redirect(url);
-    response.headers.set("Cache-Control", "no-store, must-revalidate");
-    return response;
   }
 
   return NextResponse.next();
@@ -38,11 +43,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/docs/:path*.(mp4|webm|ogg|mov)",
-    "/docs/:path*.mp4",
-    "/docs/:path*.webm",
-    "/docs/:path*.ogg",
-    "/docs/:path*.mov",
+    "/docs/:path*",
   ],
 };
 
