@@ -51,7 +51,7 @@ Este projeto está organizado conforme as situações-problema do PIT II:
 - ✅ [Formulário de Feedback](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/formulario-feedback.html)
 - ✅ [Correções e Melhorias](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/03-correcoes-melhorias.md)
 - ✅ [Documentação Final](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/04-documentacao-final.md)
-- ✅ [Vídeo de Apresentação](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/05-video-apresentacao.md)
+- ✅ [Vídeo de Apresentação](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/05-video-apresentacao.mp4)
 - ✅ [Vídeo da Solução](https://cupcakes-cs-frontend-g6ilw5uk7-luizxavierdevs-projects.vercel.app/docs/situacao-3/Vídeo-da-Solução-atualizada.mp4)
 
 ---
