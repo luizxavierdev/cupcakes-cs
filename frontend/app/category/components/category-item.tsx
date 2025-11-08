@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Divider } from "@nextui-org/react";
 
+import { translateCategory } from "@/config/data-translations";
 import { CupcakeService } from "@/gateways/cupcake.gateway";
 
 type Params = {
@@ -14,6 +15,8 @@ type Params = {
 
 export const CategoryItem = ({ category }: Params) => {
   const router = useRouter();
+  const translated = translateCategory(category.name);
+  
   return (
     <Card
       className="max-w-sm rounded-b-lg"
@@ -29,15 +32,15 @@ export const CategoryItem = ({ category }: Params) => {
         <Image
           height={1024}
           width={1024}
-          alt={category.name}
+          alt={translated.name}
           className="w-full object-cover h-[140px]"
           src={category.image}
         />
       </CardBody>
       <CardFooter className="justify-between flex-col">
-        <p className="text-lg font-bold">{category.name}</p>
+        <p className="text-lg font-bold">{translated.name}</p>
         <Divider className="my-2" />
-        <p className="text-small">{category.description}</p>
+        <p className="text-small">{translated.description || category.description}</p>
       </CardFooter>
     </Card>
   );

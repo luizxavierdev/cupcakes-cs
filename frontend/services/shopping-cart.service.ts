@@ -4,12 +4,18 @@ import { ShoppingBag } from "@/models/shopping-bag.model";
 import { StorageKeys } from "@/types/storage-keys.enum";
 
 export function getShoppingBag() {
+  if (typeof window === "undefined") {
+    return new ShoppingBag({ cupcakes: new Map() });
+  }
   const value = localStorage.getItem(StorageKeys.shoppingBag);
   const parsedValues = value ? JSON.parse(value) : [];
   return new ShoppingBag({ cupcakes: new Map(Object.entries(parsedValues)) });
 }
 
 export function storeShoppingBag(shoppingBag: ShoppingBag) {
+  if (typeof window === "undefined") {
+    return;
+  }
   localStorage.setItem(
     StorageKeys.shoppingBag,
     JSON.stringify(Object.fromEntries(shoppingBag.cupcakes))
@@ -50,5 +56,8 @@ export function removeCupcake(id: number) {
 }
 
 export function clearShoppingBag() {
+  if (typeof window === "undefined") {
+    return;
+  }
   localStorage.removeItem(StorageKeys.shoppingBag);
 }

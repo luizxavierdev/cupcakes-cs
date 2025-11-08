@@ -3,10 +3,13 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+import { getTranslations } from "@/config/translations";
 import { createAccount } from "@/gateways/account.gateway";
 import { CookiesKeys } from "@/types/cookies-keys.enum";
 
 import { z } from "zod";
+
+const t = getTranslations("pt"); // Server action - usa português por padrão
 
 type State = {
   errors?: {
@@ -19,27 +22,29 @@ type State = {
 };
 
 const schema = z.object({
-  email: z.string().email({ message: "Invalid email!" }),
+  email: z.string().email({ message: t.errors.invalidEmail }),
   firstName: z
     .string()
-    .regex(/^([A-Za-z])+$/, {
-      message: "First name must contain only letters without spaces",
+    .min(1, { message: t.errors.nameRequired })
+    .regex(/^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ\s])+$/, {
+      message: t.errors.nameOnlyLetters,
     })
-    .min(3, { message: "First name must have at least 3 letters" })
-    .max(32, { message: "First name must have at most 32 letters" }),
+    .min(3, { message: t.errors.nameMinLength })
+    .max(32, { message: t.errors.nameMaxLength }),
   lastName: z
     .string()
-    .regex(/^([A-Za-z])+$/, {
-      message: "Last name must contain only letters without spaces",
+    .min(1, { message: t.errors.lastNameRequired })
+    .regex(/^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ\s])+$/, {
+      message: t.errors.lastNameOnlyLetters,
     })
-    .min(3, { message: "Last name must have at least 3 letters" })
-    .max(32, { message: "Last name must have at most 32 letters" }),
+    .min(3, { message: t.errors.lastNameMinLength })
+    .max(32, { message: t.errors.lastNameMaxLength }),
   phone: z
     .string()
-    .regex(/^\d+$/, { message: "Phone number must contain only digits" })
+    .min(1, { message: t.errors.phoneRequired })
+    .regex(/^\d+$/, { message: t.errors.phoneOnlyDigits })
     .length(11, {
-      message:
-        "Phone number must have 11 digits including area code, e.g., 51978978978",
+      message: t.errors.phoneLength,
     }),
 });
 
@@ -72,11 +77,18 @@ export async function createAccountAction(
     cookies().set(CookiesKeys.accountId, `${account.id}`, { secure: true });
   } catch (err) {
     if (err instanceof Error) {
+      // Melhorar mensagens de erro específicas
+      const errorMessage = err.message.toLowerCase();
+      if (errorMessage.includes("email") || errorMessage.includes("já existe") || errorMessage.includes("already exists")) {
+        return {
+          errors: { request: t.errors.emailAlreadyExists },
+        };
+      }
       return {
-        errors: { request: err.message },
+        errors: { request: t.errors.createAccountFailed },
       };
     }
-    return { errors: { request: "Request failed" } };
+    return { errors: { request: t.errors.requestFailed } };
   }
 
   redirect(`/account${accountId ? `/${accountId}` : ""}`);

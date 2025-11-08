@@ -6,12 +6,13 @@ import { useTheme } from "next-themes";
 
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
 
+import { useTranslations } from "@/hooks/use-translations";
+
 import { useIsSSR } from "@react-aria/ssr";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 
 import { MoonFilledIcon } from "../atom/icons/moon-filled-icon";
 import { SunFilledIcon } from "../atom/icons/sun-filled-icon";
-
 
 import clsx from "clsx";
 
@@ -26,6 +27,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 }) => {
   const { theme, setTheme } = useTheme();
   const isSSR = useIsSSR();
+  const t = useTranslations();
 
   const onChange = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -40,9 +42,9 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     getWrapperProps,
   } = useSwitch({
     isSelected: theme === "light" || isSSR,
-    "aria-label": `Switch to ${
-      theme === "light" || isSSR ? "dark" : "light"
-    } mode`,
+    "aria-label": theme === "light" || isSSR 
+      ? t.other.theme.switchToDark 
+      : t.other.theme.switchToLight,
     onChange,
   });
 

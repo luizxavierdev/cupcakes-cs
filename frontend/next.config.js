@@ -19,33 +19,33 @@ const nextConfig = {
   },
   async headers() {
     return [
-      {
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=10800, immutable',
-          },
-        ],
-      },
-      {
-        source: '/assets/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=10800, stale-while-revalidate=86400',
-          },
-        ],
-      },
-      {
-        source: '/:path*\\.(js|css|png|jpg|jpeg|gif|svg|webp|ico)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=10800, stale-while-revalidate=86400',
-          },
-        ],
-      },
+     // {
+       // source: '/_next/static/:path*',
+        // headers: [
+        //   {
+        //     key: 'Cache-Control',
+        //     value: 'public, max-age=10800, immutable',
+        //   },
+        // ],
+     // },
+      // {
+      //   source: '/assets/:path*',
+      //   headers: [
+      //     {
+      //       key: 'Cache-Control',
+      //       value: 'public, max-age=10800, stale-while-revalidate=86400',
+      //     },
+      //   ],
+      // },
+      // {
+      //   source: '/:path*\\.(js|css|png|jpg|jpeg|gif|svg|webp|ico)',
+      //   headers: [
+      //     {
+      //       key: 'Cache-Control',
+      //       value: 'public, max-age=10800, stale-while-revalidate=86400',
+      //     },
+      //   ],
+      // },
     ];
   },
 };

@@ -1,4 +1,5 @@
 import { title } from "@/components/primitives";
+import { translateCategory } from "@/config/data-translations";
 import { getCategory, listCupcakes } from "@/gateways/cupcake.gateway";
 
 import { CupcakeCard } from "../components/cupcake-card";
@@ -14,6 +15,7 @@ export default async function Page({ params }: Readonly<Params>) {
   const cupcakes = await listCupcakes({
     categoryId: Number(params.categoryId),
   });
+  const translatedCategory = translateCategory(category.name);
 
   const handleGrid = (itemsCount: number) => {
     if (itemsCount >= 3) return "grid-cols-1 sm:grid-cols-2 xl:grid-cols-3";
@@ -23,7 +25,7 @@ export default async function Page({ params }: Readonly<Params>) {
 
   return (
     <>
-      <h1 className={title()}>{category.name}</h1>
+      <h1 className={title()}>{translatedCategory.name}</h1>
       <div
         className={`grid ${handleGrid(
           cupcakes.length

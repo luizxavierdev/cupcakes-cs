@@ -1,49 +1,55 @@
 "use client"
 
+import { useTranslations } from "@/hooks/use-translations";
+
 const Footer = () => {
-    return (<footer className="w-full bg-zinc-900 text-zinc-100 px-6 py-10 mt-10">
-        <div className="container mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+    const t = useTranslations();
+    
+    return (
+        <footer className="w-full bg-default-100 text-default-foreground px-6 py-10 mt-10 border-t border-default-200">
+            <div className="container mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
 
-            <div>
-                <h3 className="font-semibold text-lg mb-3">Cupcakes CS & Co</h3>
-                <p className="text-zinc-400">
-                    Handcrafted treats made with love. Order online and receive it at the comfort of your home!
-                </p>
+                <div>
+                    <h3 className="font-semibold text-lg mb-3">Cupcakes CS & Co</h3>
+                    <p className="text-default-500">
+                        {t.footer.description}
+                    </p>
+                </div>
+
+                <div>
+                    <h4 className="font-semibold mb-3">{t.footer.corporate}</h4>
+                    <ul className="space-y-2">
+                        <li><a href="#" className="hover:underline text-default-600">{t.footer.aboutUs}</a></li>
+                        <li><a href="#" className="hover:underline text-default-600">{t.footer.privacyPolicy}</a></li>
+                        <li><a href="#" className="hover:underline text-default-600">{t.footer.termsOfUse}</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 className="font-semibold mb-3">{t.footer.customerService}</h4>
+                    <ul className="space-y-2">
+                        <li><a href="#" className="hover:underline text-default-600">{t.footer.contactUs}</a></li>
+                        <li><a href="#" className="hover:underline text-default-600">{t.footer.faq}</a></li>
+                        <li><a href="#" className="hover:underline text-default-600">{t.footer.trackOrder}</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 className="font-semibold mb-3">{t.footer.socialMedia}</h4>
+                    <ul className="flex space-x-4">
+                        <li><a href="#" className="hover:underline text-default-600">Instagram</a></li>
+                        <li><a href="#" className="hover:underline text-default-600">Facebook</a></li>
+                        <li><a href="#" className="hover:underline text-default-600">TikTok</a></li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div>
-                <h4 className="font-semibold mb-3">Corporate</h4>
-                <ul className="space-y-2">
-                    <li><a href="#" className="hover:underline">About us</a></li>
-                    <li><a href="#" className="hover:underline">Privacy policy</a></li>
-                    <li><a href="#" className="hover:underline">Terms of use</a></li>
-                </ul>
+            <div className="border-t border-default-200 mt-10 pt-6 text-center text-xs text-default-500">
+                © {new Date().getFullYear()} Cupcakes CS & Co.
             </div>
-
-            <div>
-                <h4 className="font-semibold mb-3">Customer Service</h4>
-                <ul className="space-y-2">
-                    <li><a href="#" className="hover:underline">Contact us</a></li>
-                    <li><a href="#" className="hover:underline">FAQ</a></li>
-                    <li><a href="#" className="hover:underline">Track order</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 className="font-semibold mb-3">Social Media</h4>
-                <ul className="flex space-x-4">
-                    <li><a href="#" className="hover:underline">Instagram</a></li>
-                    <li><a href="#" className="hover:underline">Facebook</a></li>
-                    <li><a href="#" className="hover:underline">TikTok</a></li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div className="border-t border-zinc-800 mt-10 pt-6 text-center text-xs text-zinc-500">
-            © {new Date().getFullYear()} Cupcakes CS & Co.
-        </div>
-    </footer>)
+        </footer>
+    )
 }
 
 export default Footer

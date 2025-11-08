@@ -3,11 +3,14 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+import { getTranslations } from "@/config/translations";
 import { createAccountAddress } from "@/gateways/account-address.gateway";
 import { CookiesKeys } from "@/types/cookies-keys.enum";
 
 import { AxiosError } from "axios";
 import { z } from "zod";
+
+const t = getTranslations("pt"); // Server action - usa português por padrão
 
 type State = {
   errors?: {
@@ -26,23 +29,26 @@ type State = {
 const schema = z.object({
   zipcode: z
     .string()
-    .regex(/^\d+$/, { message: "ZIP code must contain only numbers" })
-    .length(8, { message: "ZIP code must be 8 digits long" }),
+    .min(1, { message: t.errors.zipcodeRequired })
+    .regex(/^\d+$/, { message: t.errors.zipcodeInvalid })
+    .length(8, { message: t.errors.zipcodeInvalid }),
   address: z
     .string()
-    .min(3, { message: "Address must be at least 3 characters long" })
-    .max(255, { message: "Address must be at most 255 characters long" }),
-  number: z.number(),
+    .min(1, { message: t.errors.addressRequired })
+    .min(3, { message: t.errors.addressMinLength })
+    .max(255, { message: t.errors.addressMaxLength }),
+  number: z.number({ message: t.errors.numberRequired }),
   complement: z.string().optional(),
   neighborhood: z
     .string()
-    .min(1, { message: "Neighborhood must be at least 1 character long" })
-    .max(255, { message: "Neighborhood must be at most 255 characters long" }),
+    .min(1, { message: t.errors.neighborhoodRequired })
+    .max(255, { message: t.errors.neighborhoodMaxLength }),
   city: z
     .string()
-    .min(3, { message: "City must be at least 3 characters long" })
-    .max(255, { message: "City must be at most 255 characters long" }),
-  state: z.string().length(2, { message: "State must be 2 letters long" }),
+    .min(1, { message: t.errors.cityRequired })
+    .min(3, { message: t.errors.cityMinLength })
+    .max(255, { message: t.errors.cityMaxLength }),
+  state: z.string().length(2, { message: t.errors.stateLength }),
   favorite: z.boolean(),
 });
 
@@ -81,8 +87,7 @@ export async function createAccountAddressAction(
   if (!accountCookie)
     return {
       errors: {
-        request:
-          "It looks like you haven't logged in yet, go back to the account menu and do so.",
+        request: "Você precisa estar logado para cadastrar um endereço. Faça login e tente novamente.",
       },
     };
 
@@ -93,16 +98,23 @@ export async function createAccountAddressAction(
     });
   } catch (err) {
     if (err instanceof AxiosError) {
+      const errorMsg = err.response?.data?.message || err.message;
+      // Melhorar mensagens de erro da API
+      if (errorMsg.toLowerCase().includes("not found") || errorMsg.toLowerCase().includes("não encontrado")) {
+        return {
+          errors: { request: t.errors.notFound },
+        };
+      }
       return {
-        errors: { request: err.response?.data?.message || err.message },
+        errors: { request: t.errors.createAddressFailed },
       };
     }
     if (err instanceof Error) {
       return {
-        errors: { request: err.message },
+        errors: { request: t.errors.createAddressFailed },
       };
     }
-    return { errors: { request: "Unexpected error" } };
+    return { errors: { request: t.errors.genericError } };
   }
   redirect(`/account/${accountCookie.value}`);
 }

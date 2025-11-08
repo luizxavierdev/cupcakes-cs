@@ -7,6 +7,7 @@ import { ThemeProviderProps } from "next-themes/dist/types";
 
 import { NextUIProvider } from "@nextui-org/system";
 
+import { LanguageProvider } from "@/contexts/language-context";
 import { ShoppingBagProvider } from "@/contexts/shopping-bag.context";
 
 export interface ProvidersProps {
@@ -16,10 +17,12 @@ export interface ProvidersProps {
 
 export function Providers({ children, themeProps }: ProvidersProps) {
   return (
-    <ShoppingBagProvider>
-      <NextUIProvider>
-        <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
-      </NextUIProvider>
-    </ShoppingBagProvider>
+    <LanguageProvider>
+      <ShoppingBagProvider>
+        <NextUIProvider>
+          <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+        </NextUIProvider>
+      </ShoppingBagProvider>
+    </LanguageProvider>
   );
 }

@@ -13,6 +13,7 @@ import { ShoppingBagContext } from "@/contexts/shopping-bag.context";
 import { useCreateOrder } from "@/hooks/use-create-order";
 import { useFetchAddress } from "@/hooks/use-fetch-address";
 import { useFetchStore } from "@/hooks/use-fetch-store";
+import { useTranslations } from "@/hooks/use-translations";
 import { CookiesKeys } from "@/types/cookies-keys.enum";
 
 import { BagAddress } from "./components/bag-address";
@@ -40,6 +41,7 @@ export default function ShoppingCartPage() {
   const { isLoading: isLoadingStore, store } = useFetchStore(address?.zipcode);
 
   const { isLoading: isLoadingOrder, handleCreateOrder } = useCreateOrder();
+  const t = useTranslations();
 
   const redirectedFrom = searchParams.get("source");
   const cupcake = searchParams.get("cupcake");
@@ -71,7 +73,7 @@ export default function ShoppingCartPage() {
     <div className="w-full flex flex-col md:flex-row justify-center gap-3 p-4">
       <div className="w-full sm:w-96 flex sm:hidden flex-col items-center gap-3">
         <LinkWithLoading href={redirectedFrom ?? "/"} className="w-4/5">
-          <Button extraClassNames="w-full">Continue shopping</Button>
+          <Button extraClassNames="w-full">{t.buttons.continueShopping}</Button>
         </LinkWithLoading>
       </div>
 
@@ -113,20 +115,20 @@ export default function ShoppingCartPage() {
 
       <div className="w-full sm:w-96 flex flex-col items-center gap-3">
         <Card className="w-full p-4">
-          <strong>Address</strong>
+          <strong>{t.other.address}</strong>
           {isLoadingAddress ? (
             <BagAddressSkeleton />
           ) : (
             <BagAddress address={address} />
           )}
-          <strong>Shop</strong>
+          <strong>{t.other.shop}</strong>
           {isLoadingStore || isLoadingAddress ? (
             <BagAddressSkeleton />
           ) : (
             <BagStore store={store} />
           )}
           <span className="flex justify-between mt-2">
-            <strong>Total</strong>
+            <strong>{t.other.total}</strong>
             <span>
               {shoppingBag.getTotalValue(cupcakes).toLocaleString("pt-BR", {
                 style: "currency",
@@ -142,7 +144,7 @@ export default function ShoppingCartPage() {
             <Button
               extraClassNames="w-4/5"
             >
-              Login
+              {t.other.login}
             </Button>
           </a>
         }
@@ -152,7 +154,7 @@ export default function ShoppingCartPage() {
             {!address?.id ? (
               <LinkWithLoading href="/address/create">
                 <Button extraClassNames="w-4/5">
-                  Register an address
+                  {t.other.registerAddress}
                 </Button>
               </LinkWithLoading>
             ) : (
@@ -168,12 +170,12 @@ export default function ShoppingCartPage() {
                   });
                 }}
               >
-                Finish
+                {t.buttons.finish}
               </Button>
             )}
 
             <UILink href={redirectedFrom ?? "/"} className="hidden sm:block">
-              Continue shopping
+              {t.buttons.continueShopping}
             </UILink>
           </>
         )}

@@ -46,6 +46,9 @@ export function ShoppingBagProvider({
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
     listener();
     window.addEventListener("storage", listener);
     return () => {

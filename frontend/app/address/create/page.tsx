@@ -5,6 +5,7 @@ import { Input } from "@nextui-org/input";
 import { Checkbox, Select, SelectItem } from "@nextui-org/react";
 
 import { Button } from "@/components/atom/button";
+import { useTranslations } from "@/hooks/use-translations";
 import { STATE_UF } from "@/utils/state-uf.contant";
 
 import { createAccountAddressAction } from "../actions/create-account-address.action";
@@ -14,6 +15,7 @@ import { useFormState, useFormStatus } from "react-dom";
 export default function Page() {
   const [state, formAction] = useFormState(createAccountAddressAction, {});
   const { pending } = useFormStatus();
+  const t = useTranslations();
   const [form, setForm] = useState({
     address: "",
     number: "",
@@ -50,12 +52,12 @@ export default function Page() {
         className="flex flex-col justify-center items-stretch gap-4"
         action={formAction}
       >
-        <h2>Enter your address:</h2>
+        <h2>{t.titles.enterAddress}</h2>
         <Input
           type="text"
           name="zipcode"
           variant="bordered"
-          label="CEP"
+          label={t.forms.zipcode}
           isRequired
           isDisabled={isLoading}
           errorMessage={state.errors?.zipcode}
@@ -75,7 +77,7 @@ export default function Page() {
           type="text"
           name="address"
           variant="bordered"
-          label="Address"
+          label={t.forms.address}
           isRequired
           isDisabled={isLoading}
           errorMessage={state.errors?.address}
@@ -93,7 +95,7 @@ export default function Page() {
             type="text"
             name="number"
             variant="bordered"
-            label="Number"
+            label={t.forms.number}
             isRequired
             isDisabled={isLoading}
             errorMessage={state.errors?.number}
@@ -110,7 +112,7 @@ export default function Page() {
             type="text"
             name="complement"
             variant="bordered"
-            label="Complement"
+            label={t.forms.complement}
             isDisabled={isLoading}
             errorMessage={state.errors?.complement}
             value={form.complement}
@@ -126,7 +128,7 @@ export default function Page() {
           type="text"
           name="neighborhood"
           variant="bordered"
-          label="Neighborhood"
+          label={t.forms.neighborhood}
           isRequired
           isDisabled={isLoading}
           errorMessage={state.errors?.neighborhood}
@@ -144,7 +146,7 @@ export default function Page() {
             type="text"
             name="city"
             variant="bordered"
-            label="City"
+            label={t.forms.city}
             isRequired
             isDisabled={isLoading}
             errorMessage={state.errors?.city}
@@ -160,6 +162,7 @@ export default function Page() {
             className="w-32"
             name="state"
             variant="bordered"
+            label={t.forms.state}
             isDisabled={isLoading}
             selectedKeys={[form.state]}
             onChange={(e) => {
@@ -177,13 +180,15 @@ export default function Page() {
           </Select>
         </section>
         <Checkbox className="self-center" name="favorite" value="true" defaultSelected>
-          Save as main address
+          {t.forms.saveAsMain}
         </Checkbox>
         {state.errors?.request && (
-          <h2 className="text-center text-red-500">{state.errors?.request}</h2>
+          <div className="text-center text-danger text-sm p-2 bg-danger-50 dark:bg-danger-900/20 rounded-lg">
+            {state.errors?.request}
+          </div>
         )}
         <Button type="submit" fullWidth isLoading={isLoading}>
-          Create
+          {t.buttons.create}
         </Button>
       </form>
     </div>

@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
+import { getTranslations } from "@/config/translations";
 import { listOrder } from "@/gateways/order.gateway";
 import { CookiesKeys } from "@/types/cookies-keys.enum";
 
@@ -11,13 +12,14 @@ export default async function Page() {
   if (!account) return redirect(`/account/login`);
 
   const orders = await listOrder(Number(account.value));
+  const t = getTranslations("pt"); // Server component - usa português por padrão
 
   if (orders.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center h-[60vh] text-center text-zinc-500">
         <div className="text-5xl mb-4">🧁</div>
-        <h2 className="text-xl font-semibold">{"You haven't placed any orders yet"}</h2>
-        <p className="text-sm mt-2">Explore our cupcakes and make your first purchase!!</p>
+        <h2 className="text-xl font-semibold">{t.info.noOrders}</h2>
+        <p className="text-sm mt-2">{t.info.exploreCupcakes}</p>
       </div>
     );
   }
