@@ -41,6 +41,7 @@ export const translations = {
       finish: "Finalizar",
       remove: "Remover",
       add: "Adicionar",
+      download: "Download",
     },
 
     // Títulos e cabeçalhos
@@ -209,6 +210,7 @@ export const translations = {
       finish: "Finish",
       remove: "Remove",
       add: "Add",
+      download: "Download",
     },
 
     // Titles and headers

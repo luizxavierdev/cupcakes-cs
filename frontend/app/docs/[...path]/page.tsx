@@ -52,7 +52,7 @@ export default async function DocsPage({ params }: Props) {
         <BackButton />
         <a href={videoPath} download>
           <Button extraClassNames="">
-            {t.buttons?.download || "Download"}
+            {t.buttons.download}
           </Button>
         </a>
       </div>
