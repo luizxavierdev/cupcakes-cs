@@ -7,7 +7,6 @@ import { useTheme } from "next-themes";
 import { SwitchProps, useSwitch } from "@nextui-org/switch";
 
 import { useTranslations } from "@/hooks/use-translations";
-
 import { useIsSSR } from "@react-aria/ssr";
 import { VisuallyHidden } from "@react-aria/visually-hidden";
 

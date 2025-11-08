@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { Button } from "@/components/atom/button";
-
 interface VideoPlayerProps {
   src: string;
   title: string;
@@ -77,8 +75,8 @@ export function VideoPlayer({ src, title }: VideoPlayerProps) {
     if (!video) return;
 
     if (!document.fullscreenElement) {
-      video.requestFullscreen().catch((err) => {
-        console.error("Erro ao entrar em fullscreen:", err);
+      video.requestFullscreen().catch(() => {
+        // Erro ao entrar em fullscreen - silenciosamente ignorado
       });
     } else {
       document.exitFullscreen();
