@@ -28,11 +28,8 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(nestApp, config);
   
-  // Usar /swagger em vez de /api para evitar conflito com funções serverless do Vercel
-  const swaggerPath = '/swagger';
-  
-  // Configurar Swagger com opções para funcionar corretamente no Vercel
-  SwaggerModule.setup(swaggerPath, nestApp, document, {
+  // Configuração do Swagger para funcionar corretamente no Vercel
+  const swaggerOptions = {
     swaggerOptions: {
       persistAuthorization: true,
       // Configurar para funcionar em ambientes serverless
@@ -49,7 +46,14 @@ async function bootstrap() {
     customCssUrl: process.env.NODE_ENV === 'production' 
       ? 'https://unpkg.com/swagger-ui-dist@5.17.14/swagger-ui.css'
       : undefined,
-  });
+  };
+  
+  // Configurar Swagger na rota raiz (/)
+  SwaggerModule.setup('/', nestApp, document, swaggerOptions);
+  
+  // Configurar Swagger também em /swagger para manter compatibilidade
+  const swaggerPath = '/swagger';
+  SwaggerModule.setup(swaggerPath, nestApp, document, swaggerOptions);
   
   // Salvar swagger.json apenas em desenvolvimento
   if (process.env.NODE_ENV !== 'production') {
@@ -57,7 +61,8 @@ async function bootstrap() {
   }
   
   // Swagger disponível em produção também
-  apiLogger.log(`📚 Swagger docs available on ${host}${swaggerPath}`);
+  apiLogger.log(`📚 Swagger docs available on ${host}/`);
+  apiLogger.log(`📚 Swagger docs also available on ${host}${swaggerPath}`);
 
   nestApp.useGlobalPipes(
     new ValidationPipe({
@@ -108,7 +113,8 @@ if (process.env.NODE_ENV !== 'production') {
     const port = process.env.PORT || 3335;
     server.listen(port, () => {
       console.log(`🚀 Server running on http://localhost:${port}`);
-      console.log(`📚 Swagger available on http://localhost:${port}/swagger`);
+      console.log(`📚 Swagger available on http://localhost:${port}/`);
+      console.log(`📚 Swagger also available on http://localhost:${port}/swagger`);
     });
   });
 }
